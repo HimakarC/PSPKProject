@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        Enter FirstName
+        <input type="text", placeholder="First Name", name="first_name"><br>
+        Enter LastName
+        <input type="text", name="last_name", placeholder="Last Name"><br>
+        Enter UserName
+        <input type="text", name="username", placeholder="User Name"><br>
+        Enter Email
+        <input type="email", name="email", placeholder="Email"><br>
+        Enter Password
+        <input type="password", name="password", placeholder="Password"><br>
+        Confirm-Password
+        <input type="password", name="passwordcheck", placeholder="Confirm Password"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        {% for m in messages %}
+        <h3>{{m}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
