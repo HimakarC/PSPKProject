@@ -1,0 +1,58 @@
+{% load static %}
+{% static "images" as bu %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        .text
+        {
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 3.5;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+        }
+        .text22
+        {
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 2;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+        {% if user.is_authenticated %}
+        <span>Hello, {{user.first_name}}</span>
+        <div style="display: flex; align-items: center;">
+            <span><img src="{{bu}}/pk.jpg" style="max-width: 300%; margin-right: 10px; height: auto; width: 140%;"></span>
+            <div class="text22">
+                <span style="margin-left: 25dvh; font-size: xx-large;">PAWAN KALYAN FAN CLUB</span>
+                <span style="margin-left: 45dvh; font-size: x-large;"><a href="pk/movies">Movies</a></span></button>
+                <span style="margin-left: 45dvh; font-size: x-large;"><a href="pk/songs">Songs</a></span></button>
+                <span style="margin-left: 45dvh; font-size: x-large;"><a href="pk/speeches">Speeches</a></span></button>
+                <span style="margin-left: 45dvh; font-size: x-large;"><a href="pk/gallery">Gallery</a></span></button>
+                <span style="margin-left: 45dvh; font-size: x-large;"><a href="pk/register">Janasena</a></span></button>
+            </div>
+        </div>
+        <a href="pk/logout">Logout</a><br>
+        {% else %}
+        <div style="display: flex; align-items: center;">
+            <img src="{{bu}}/pk.jpg" style="max-width: 100%; margin-right: 10px; height: auto; width: 48%;">
+            <div class="text">
+                <span style="margin-left: 0.5dvh; font-size: x-large;">PAWAN KALYAN FAN CLUB</span>
+                <button style="cursor: pointer; margin: auto; font-size: medium;"><span><a href="pk/login">Login</a></span></button>
+                <button style="cursor: pointer; margin: auto; font-size: medium;"><span><a href="pk/register">Register</a></span></button>
+            </div>
+        </div>
+        {% endif %}
+    </body>
+</html>

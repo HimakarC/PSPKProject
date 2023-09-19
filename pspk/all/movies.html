@@ -1,0 +1,71 @@
+{% load static %}
+{% static "images" as bu %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        .text
+        {
+            margin: 20px auto;
+            padding: 10px;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+        .text22
+        {
+            margin: 20px auto;
+            padding: 10px;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            margin-left: -30dvh;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <span style="margin-left: 0.5dvh; font-size: xx-large;">PAWAN KALYAN FAN CLUB</span>
+    </div>
+    <div class = "text22">
+        <p>
+            1. Akkada Ammai Ekkada Abbai<br><br>
+            <img src="{{bu}}/ak.jpg" width="35%" style="margin: 0 auto; display: block;">
+            <pre style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            "Akkada Ammai Ikkada Abbai" is a popular Telugu language film released in 1996.
+
+            <b>Title:</b> Akkada Ammai Ikkada Abbai
+
+            <b>Release Date:</b> 1996
+            
+            <b>Genre:</b> Romantic Comedy
+            
+            <b>Director:</b> E.V.V. Satyanarayana
+            
+            <b>Cast:</b>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Pawan Kalyan as Raja</b>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Supriya as Priya</b>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Sarath Babu as Priya's father</b>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Kota Srinivasa Rao as Koteswara Rao</b>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Brahmanandam as Satti Babu</b>
+            </pre>
+            <a href="https://www.youtube.com/" style="margin-left: 30dvh;">Click here for Youtube Link</a><br>
+        </p>
+        <a href="logout">Logout</a><br>
+        <a href="back">Back</a>
+    </div>
+</body>
+</html>

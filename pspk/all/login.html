@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .text22
+        {
+            margin: 20px auto;
+            padding: 10px;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            margin-left: -5dvh;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <div class="text22">
+            {% csrf_token %}
+            <p>
+                Enter Username
+                <input type="text", placeholder="Enter Username", name = "username"><br>
+            </p>
+            <p>
+                Enter Password
+                <input type="password", placeholder="Password", name="password"><br>
+            </p>
+            <button type="submit" style="cursor: pointer;">Login</button><br>
+        </div>
+</body>
+</html>

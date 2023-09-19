@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        .text22
+        {
+            margin: 20px auto;
+            padding: 10px;
+            color: black;
+            left:10vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            margin-left: -5dvh;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <div class="text22">
+            {% csrf_token %}
+            <p>
+                Enter FirstName
+                <input type="text", placeholder="First Name", name="first_name"><br>
+            </p>
+            <p>
+                Enter LastName
+                <input type="text", name="last_name", placeholder="Last Name"><br>
+            </p>
+            <p>
+                Enter UserName
+                <input type="text", name="username", placeholder="User Name" required><br>
+            </p>
+            <p>
+                Enter Email
+                <input type="email", name="email", placeholder="Email"><br>
+            </p>
+            <p>
+                Enter Password
+                <input type="password", name="password", placeholder="Password" required><br>
+            </p>
+            <p>
+                Confirm-Password
+                <input type="password", name="passwordcheck", placeholder="Confirm Password"><br>
+            </p>
+            <button type="submit" style="cursor: pointer;">Register</button>
+        </div>
+    </form>
+    <div>
+        {% for m in messages %}
+        <h3>{{m}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
